@@ -1,0 +1,40 @@
+<div id="header"><a href="http://www.cam.ac.uk/"><img alt="University of Cambridge" src="https://www.cl.cam.ac.uk/images/identifier.gif" /></a></div>
+<div id="dept-title"><a href="https://www.cl.cam.ac.uk">Department of Computer Science and Technology</a></div>
+
+<link rel="stylesheet" type="text/css" href="tempsheet.css" />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<div id="container">
+<h1 id="sample-test-1-question-11">Sample Test 1 Question 11</h1>
+<h3 id="related-topics">Related Topics</h3>
+<ul>
+<li>Recurrences</li>
+<li>Method of differences</li>
+<li>Induction</li>
+</ul>
+<h2 id="warmup-questions">Warmup Questions</h2>
+<ol type="1">
+<li>Every day, a builder has to lay 2 more bricks than the total amount of bricks laid in the last 2 days. Express the number of bricks laid a day as a recursive formula.</li>
+<li>Simplify <span class="math inline">\(\sum_{k=2}^n (\frac{1}{k} - \frac{1}{k-1})\)</span>.</li>
+</ol>
+<h2 id="csat-question">CSAT Question</h2>
+<p>An organism is born on day <span class="math inline">\(k=1\)</span> with <span class="math inline">\(1\)</span> cells. During day <span class="math inline">\(k=2,3,\ldots\)</span> the organism produces <span class="math inline">\(\frac{k^2}{k-1}\)</span> times more new cells than it produced on day <span class="math inline">\(k-1\)</span>. Give a simplified expression for the total of all its cells after <span class="math inline">\(n\)</span> days. <strong>Hint:</strong> This is different to the number of new cells produced during day <span class="math inline">\(n\)</span></p>
+<h2 id="hints">Hints</h2>
+<ol type="1">
+<li>Could you formulate the number of new cells each day as a recurrence?</li>
+<li>Can you write your recurrence relationship in closed form (non-recursive)?</li>
+<li>The total number of cells on any day is the sum of the number of cells produced by the organism up to that day.</li>
+<li>Try to rearrange <span class="math inline">\(k\cdot k!\)</span> into a difference between 2 factorials.</li>
+</ol>
+<h2 id="solution">Solution</h2>
+<p>Denote with <span class="math inline">\(f(k)\)</span> the number of cells grown at step <span class="math inline">\(k\)</span>. We have the recurrence</p>
+<p><span class="math display">\[f(k)=\frac{k^2}{k-1}\,f(k-1),\]</span></p>
+<p>which we can expand as</p>
+<p><span class="math display">\[
+=\frac{k^2}{k-1}\cdot\frac{(k-1)^2}{k-2}\,f(k-2) \\
+=\frac{k^2}{k-1}\cdot\frac{(k-1)^2}{k-2}\cdot\frac{(k-2)^2}{k-3}\,f(k-3) \\
+= k^2 \cdot (k-1) \cdot (k-2) \cdots 1\\
+=k \cdot k!.
+\]</span></p>
+<p>The total number of cells is thus <span class="math display">\[\sum_{k=1}^n k\cdot k!= \sum_{k=1}^n ((k+1)-1)k! = \sum_{k=1}^n (k+1)! - \sum_{k=1}^n k!,\]</span> where all the terms except the largest and smallest cancel each other leaving <span class="math inline">\((n+1)!-1\)</span>.</p>
+</div>

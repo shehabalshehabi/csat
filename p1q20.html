@@ -1,0 +1,59 @@
+<div id="header"><a href="http://www.cam.ac.uk/"><img alt="University of Cambridge" src="https://www.cl.cam.ac.uk/images/identifier.gif" /></a></div>
+<div id="dept-title"><a href="https://www.cl.cam.ac.uk">Department of Computer Science and Technology</a></div>
+
+<link rel="stylesheet" type="text/css" href="tempsheet.css" />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<div id="container">
+<h1 id="sample-test-1-question-20">Sample Test 1 Question 20</h1>
+<h3 id="related-topics">Related Topics</h3>
+<ul>
+<li>Integration</li>
+<li>Limits</li>
+<li>Series Expansions</li>
+</ul>
+<h2 id="warmup-questions">Warmup Questions</h2>
+<ol type="1">
+<li>By considering <span class="math inline">\(n^2 - (n-1)^2\)</span> express <span class="math inline">\(n^2\)</span> as a sum of <span class="math inline">\(n\)</span> terms .</li>
+<li>Integrate <span class="math inline">\(x^2\)</span> from first principles. Drawing a diagram and the fact that <span class="math inline">\(1+4+\cdots + n^2 = \frac{n(n+1)(2n+1)}{6}\)</span> may be useful.</li>
+<li>Evaluate <span class="math inline">\(\lim\limits_{x\rightarrow\infty} \frac{cos(x)}{x}\)</span>.</li>
+</ol>
+<h2 id="csat-question">CSAT Question</h2>
+<p>Evaluate <span class="math inline">\(\lim\limits_{n\rightarrow\infty} \left(\frac{1}{n+1}+\frac{1}{n+2}+\cdots+\frac{1}{2n}\right)\)</span>. Hint: Graph sketching may help.</p>
+<h2 id="approach-1">Approach 1</h2>
+<h3 id="hints">Hints</h3>
+<ol type="1">
+<li>What does the graph of <span class="math inline">\(\frac{1}{x}\)</span> look like?</li>
+<li>Maybe put the terms of the sum on your graph?</li>
+<li>Can you represent each term as a shape with an area equal to the terms value?</li>
+<li>Can you come up with 2 continuous functions as upper and lower bounds for the terms of the sum? (Think of a way to link to the rectangles you drew in previous hint.)</li>
+    <li>For n=5, the graph should look like this:</li> <img src="https://i.imgur.com/cPfwiI9.png" /> <li>What are the areas underneath the two functions, and how do they relate to the sum?</li>
+<li>Try using the squeeze theorem.</li>
+</ol>
+<h3 id="solution">Solution</h3>
+<p>Each number <span class="math inline">\(\frac{1}{k}\)</span> is equal to the area of the rectangle extending to the right of the number, having height <span class="math inline">\(\frac{1}{k}\)</span> and width 1. By sketching, notice there are two obvious continuous functions bounding these rectangles, one above, i.e. <span class="math inline">\(\frac{1}{x-1}\)</span>, and one below, i.e. <span class="math inline">\(\frac{1}{x}\)</span>, whose integrals will also bound the initial sum under the limit.</p>
+<p>Concretely,</p>
+<p><span class="math display">\[
+  \int_{n+1}^{2n+1} \frac{dx}{x} &lt; \sum_{k=n+1}^{2n}\frac{1}{k} &lt; \int_{n+1}^{2n+1}\frac{dx}{x-1}.
+  \]</span> At <span class="math inline">\(n\rightarrow\infty\)</span>, both integrals become <span class="math inline">\(\ln2\)</span>.</p>
+<h2 id="approach-2">Approach 2</h2>
+<h3 id="hints-1">Hints</h3>
+<ol type="1">
+<li>Write expression in summation notation. Furthermore, could you restrict the starting index of both summations to <span class="math inline">\(k=1\)</span>?</li>
+<li>You should get <span class="math inline">\(f(n)=\sum_{k=1}^{2n}\frac{1}{k} -\sum_{k=1}^n\frac{1}{k}\)</span>. How can you rewrite this sum using parity?</li>
+<li>What is the Taylor expansion of ln(x+1)?</li>
+</ol>
+<h3 id="solution-1">Solution</h3>
+<p>Write <span class="math inline">\(f(n)=\sum_{k=1}^{2n}\frac{1}{k} -\sum_{k=1}^n\frac{1}{k}\)</span> and consider the terms of these two sums. By pairing the even terms of the first sum with the terms of the second sum, each pair gives <span class="math inline">\(\frac{1}{2k}-\frac{1}{k}=-\frac{1}{2k}\)</span>. We are left with the odd terms and the negative even terms, which give: <span class="math inline">\(f(n)=1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\cdots+\frac{1}{2n-1}-\frac{1}{2n}.\)</span></p>
+<p>This is the alternating harmonic series, which is known to converge to <span class="math inline">\(\ln2\)</span> when <span class="math inline">\(n\to\infty\)</span>. Alternatively, one can also expand (Taylor) the function <span class="math inline">\(\ln(1+x)\)</span> and take <span class="math inline">\(x=1.\)</span></p>
+<h2 id="approach-3">Approach 3</h2>
+<h3 id="hints-2">Hints</h3>
+<ol type="1">
+<li>How does the expression change when n changes ?</li>
+<li>If we write <span class="math inline">\(f(n) = \frac{1}{n+1}+\frac{1}{n+2}+\cdots+\frac{1}{2n}\)</span>. What is <span class="math inline">\(f(n)-f(n-1)\)</span>?</li>
+<li>How can you use the previous hint to express <span class="math inline">\(f(n)\)</span> as a sum of <span class="math inline">\(2n\)</span> terms?</li>
+<li>Does the Taylor expansion of <span class="math inline">\(ln(1+x)\)</span> look familiar?</li>
+</ol>
+<h3 id="solution-2">solution</h3>
+<p>Let <span class="math inline">\(f(n) = \frac{1}{n+1}+\frac{1}{n+2}+\cdots+\frac{1}{2n}\)</span>. We aim to express f(n) as a different sum. To achive this, we use the fact that <span class="math inline">\(f(n) = f(1) + \left( f(2) - f(1) \right) + \cdots + \left(f(n)-f(n-1)\right)\)</span>. Notice that all terms except <span class="math inline">\(f(n)\)</span> get canceled in this expression. Now consider <span class="math display">\[f(k)-f(k-1) = \frac{1}{2k-1}+\frac{1}{2k} - \frac{1}{k} = \frac{1}{2k-1}-\frac{1}{2k}.\]</span> Now we can put this result into our formula for <span class="math inline">\(f(n)\)</span> and hence obtain <span class="math display">\[f(n) = \sum_{k=1}^{n}  \frac{1}{2k-1}-\frac{1}{2k} = 1 -\frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \cdots + \frac{1}{2n-1} - \frac{1}{2n}.\]</span> Now we can notice that these are the first <span class="math inline">\(2n\)</span> terms of the Taylor expansion of <span class="math inline">\(\ln2\)</span>. Hence, <span class="math inline">\(\lim\limits_{n\rightarrow\infty} f(n) = \ln2.\)</span></p>
+</div>

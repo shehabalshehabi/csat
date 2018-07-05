@@ -1,0 +1,22 @@
+<div id="header"><a href="http://www.cam.ac.uk/"><img alt="University of Cambridge" src="https://www.cl.cam.ac.uk/images/identifier.gif" /></a></div>
+<div id="dept-title"><a href="https://www.cl.cam.ac.uk">Department of Computer Science and Technology</a></div>
+
+<link rel="stylesheet" type="text/css" href="tempsheet.css" />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<div id="container">
+<h1 id="sample-test-1-question-7">Sample Test 1 Question 7</h1>
+<h3 id="related-topics">Related Topics</h3>
+<ul>
+<li>Series Expansions</li>
+<li>Properties of Logarithms</li>
+</ul>
+<h2 id="csat-question">CSAT Question</h2>
+<p>The Taylor expansion of <span class="math inline">\(\ln(1+x)\)</span> is defined as <span class="math inline">\(\ln(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-\cdots\)</span>. Expand <span class="math inline">\(\ln\!\left(\frac{1-x}{1+x^2}\right)\)</span> up to and including the 4th power of <span class="math inline">\(x\)</span>.</p>
+<h2 id="hints">Hints</h2>
+<ol type="1">
+<li>How can you express <span class="math inline">\(\ln\!\left(\frac{1-x}{1+x^2}\right)\)</span> as a difference of two functions similar to <span class="math inline">\(\ln(1+x)\)</span>?</li>
+</ol>
+<h2 id="solution">Solution</h2>
+<p>Although this question involves Taylor expansion, we do not need to know how to formally expand a function into a Taylor series to answer it. We can denote <span class="math inline">\(f(x)=\ln(1+x)\)</span>. Now we need to notice that <span class="math inline">\(\ln\!\left(\frac{1-x}{1+x^2}\right) = \ln(1-x)-\ln(1+x^2) =f(-x)-f(x^2).\)</span> Since the Taylor expansion of <span class="math inline">\(f(x)\)</span> is given in the question we can plug in <span class="math inline">\(-x\)</span> and <span class="math inline">\(x^2\)</span> into this formula to obtain corresponding expansions up to <span class="math inline">\(x^4\)</span> and simply add them. <span class="math display">\[\ln\!\left(\frac{1-x}{1+x^2}\right)=(-x-\frac{x^2}{2}-\frac{x^3}{3}-\frac{x^4}{4}-\ldots)-(x^2-\frac{x^4}{2}+\ldots)=-x-\frac{3x^2}{2}-\frac{x^3}{3}+\frac{x^4}{4}+\ldots\]</span></p>
+</div>

@@ -1,0 +1,31 @@
+<div id="header"><a href="http://www.cam.ac.uk/"><img alt="University of Cambridge" src="https://www.cl.cam.ac.uk/images/identifier.gif" /></a></div>
+<div id="dept-title"><a href="https://www.cl.cam.ac.uk">Department of Computer Science and Technology</a></div>
+
+<link rel="stylesheet" type="text/css" href="tempsheet.css" />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<div id="container">
+<h1 id="sample-test-1-question-14">Sample Test 1 Question 14</h1>
+<h3 id="related-topics">Related Topics</h3>
+<ul>
+<li>Similar Triangles</li>
+<li>Area of a Triangle</li>
+</ul>
+<h2 id="warmup-questions">Warmup Questions</h2>
+<ul>
+<li>What is the ratio of the area of a circle to the area of a square with equal perimeter?</li>
+<li>An isosceles triangle has base <span class="math inline">\(6\)</span> and height <span class="math inline">\(8\)</span>. Use the Pythagorean theorem to find the length of its legs. By calculating its area find its height when each leg is considered the base.</li>
+</ul>
+<h2 id="csat-question">CSAT Question</h2>
+<p>You must slice a square of side length <span class="math inline">\(b\)</span> into 6 pieces with equal areas, using 3 lines that intersect each other inside the square, one of which is diagonal. Where on the sides of the square, with respect to the nearest corner, should the other two lines cut? Give your answer in terms of <span class="math inline">\(b\)</span>.</p>
+<h2 id="hints">Hints</h2>
+<ol type="1">
+<li>Can you explain why all three lines must intersect at one point inside the square?</li>
+<li>Can you explain why this point must lie in the centre of the square?</li>
+<li>Can you explain why this two lines must be symmetric?</li>
+    <li>The configuration of lines looks like this: </li><embed src="https://i.imgur.com/cwTLz2Q.png" style="width:250;height:200;" />.<li> What are the areas of six triangles in terms of <span class="math inline">\(b\)</span> and <span class="math inline">\(x\)</span>?</li>
+</ol>
+<h2 id="solution">Solution</h2>
+<p>All three lines must intersect at the same point and the intersection point must be in the centre of the square. The only way for the two free lines to yield 6 equal areas is like in the figure below (proof further down).</p> <img src="https://i.imgur.com/cwTLz2Q.png" /> <p> &bull; If the lines do not all intersect at the same point inside the square then the only possibility is that the other two lines pass through some corner, otherwise there would be more than 6 resulting pieces. But in this case, the resulting areas can never be all equal. The intersection point must thus be inside the square. </p>  <p> &bull; It must also be its centre. Any other point would give at least an area smaller than other (in particular, the triangle delimited by the smaller diagonal segment and the smaller line segment). </p>  <p> &bull; The two lines must also intersect different square edges or else, looking at the triangles at the right/left of the diagonal, one of them will be larger than the other two. </p>  <p> &bull; The two lines must be symmetric wrt both diagonals, otherwise the 1st and 3rd triangle from those on the right/left of the diagonal will have different areas.</p>
+<p>The four triangles sharing an edge with a diagonal will always have equal area, as do the other two, so we’ll only concentrate on one of each. The first one has area <span class="math inline">\(\frac{1}{4}\cdot(b-x)b\)</span> and the second is found by subtracting from the half square the two bordering triangles, i.e. <span class="math inline">\(\frac{b^2}{2}-\frac{(b-x)b}{2}\)</span>. Equating we find <span class="math inline">\(x=\frac{b}{3}\)</span> and hence <span class="math inline">\(b-x=\frac{2b}{3}\)</span>.</p>
+</div>

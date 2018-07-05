@@ -1,0 +1,23 @@
+<div id="header"><a href="http://www.cam.ac.uk/"><img alt="University of Cambridge" src="https://www.cl.cam.ac.uk/images/identifier.gif" /></a></div>
+<div id="dept-title"><a href="https://www.cl.cam.ac.uk">Department of Computer Science and Technology</a></div>
+
+<link rel="stylesheet" type="text/css" href="tempsheet.css" />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<div id="container">
+<h1 id="sample-test-1-question-2">Sample Test 1 Question 2</h1>
+<h3 id="related-topics">Related Topics</h3>
+<ul>
+<li>Recursive Functions</li>
+</ul>
+<h2 id="csat-question">CSAT Question</h2>
+<p>Let <span class="math inline">\(f(x)\)</span> mean that the function <span class="math inline">\(f\)</span> is applied to <span class="math inline">\(x\)</span>, and <span class="math inline">\(f^n(x)\)</span> mean <span class="math inline">\(f(f(...f(x)))\)</span>, that is <span class="math inline">\(f\)</span> is applied to <span class="math inline">\(x\)</span>, <span class="math inline">\(n\)</span> times. Let <span class="math inline">\(g(x)=x+1\)</span> and <span class="math inline">\(h_n(x)=g^n(x)\)</span>. What is <span class="math inline">\(h_n^m(0)\)</span>?</p>
+<h2 id="hints">Hints</h2>
+<ol type="1">
+<li>What is <span class="math inline">\(g_n(x)\)</span> in terms of <span class="math inline">\(x\)</span> and <span class="math inline">\(n\)</span>?</li>
+<li>By trying values of <span class="math inline">\(m\)</span>, give an expression for <span class="math inline">\(g_n^m(x)\)</span>.</li>
+</ol>
+<h2 id="solution">Solution</h2>
+<p>We have <span class="math inline">\(g_n(x)=f^n(x)=x+n\)</span> since <span class="math inline">\(1\)</span> must be added <span class="math inline">\(n\)</span> times. To compute <span class="math inline">\(g_n^m(0)\)</span> we may first obtain <span class="math inline">\(g_n^m(x)\)</span>, and then evaluate it at <span class="math inline">\(x=0\)</span>. Consider that <span class="math inline">\(g_n^2(x)=g_n(g_n(x))=g_n(x+n)=x+2n\)</span>. We can hence inductively see that <span class="math inline">\(g_n^m(x)=x+mn\)</span>.</p>
+<p><span class="math display">\[\therefore g_n^m(0)=mn\]</span></p>
+</div>

@@ -1,0 +1,35 @@
+<div id="header"><a href="http://www.cam.ac.uk/"><img alt="University of Cambridge" src="https://www.cl.cam.ac.uk/images/identifier.gif" /></a></div>
+<div id="dept-title"><a href="https://www.cl.cam.ac.uk">Department of Computer Science and Technology</a></div>
+
+<link rel="stylesheet" type="text/css" href="tempsheet.css" />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<div id="container">
+<h1 id="sample-test-1-question-12">Sample Test 1 Question 12</h1>
+<h3 id="related-topics">Related Topics</h3>
+<ul>
+<li>Combinations</li>
+<li>Permutations</li>
+</ul>
+<h2 id="warmup-questions">Warmup Questions</h2>
+<ol type="1">
+<li><p>A binary number consists of only <span class="math inline">\(1\)</span>s and <span class="math inline">\(0\)</span>s. How many values can be represented by a <span class="math inline">\(8\)</span>-bit binary number?</p></li>
+<li><p>How many different ways are there to arrange 5 people <span class="math inline">\((A,B,C,D,E)\)</span> in a line if A must be at the either end of it?</p></li>
+<li><p>How many <span class="math inline">\(3\)</span> digit numbers exist, using only even digits? <em>Hint: 3 digit numbers cannot begin with a 0.</em></p></li>
+</ol>
+<h2 id="csat-question">CSAT Question</h2>
+<p>Let <span class="math inline">\(n &lt; 10\)</span> be a non-negative integer. How many integers from <span class="math inline">\(0\)</span> to <span class="math inline">\(999\)</span> inclusive have the sum of their digits equal to <span class="math inline">\(n\)</span>? Give your answer in terms of <span class="math inline">\(n\)</span>. <em>Hint:</em> Try first for integers from <span class="math inline">\(0\)</span> to <span class="math inline">\(99\)</span>.</p>
+<h2 id="hints">Hints</h2>
+<ol type="1">
+<li><p>How many possible digits are there?</p></li>
+<li><p>Considering there are up to <span class="math inline">\(3\)</span> digits, if <span class="math inline">\(n=9\)</span>, what are the largest <span class="math inline">\(3\)</span> numbers that can be made? What does this tell us about the distribution of <span class="math inline">\(n\)</span>?</p></li>
+<li><p>Values adding to <span class="math inline">\(n\)</span> are moved between the <span class="math inline">\(3\)</span> digits. What problem is this analogous to?</p></li>
+<li><p>Consider mapping this to a balls in boxes problem.</p></li>
+<li><p>If there are <span class="math inline">\(n\)</span> balls and <span class="math inline">\(3\)</span> boxes, how many arrangements are there?</p></li>
+<li><p>Treat the boxes as walls that divide them. How many permutations of walls and balls are there?</p></li>
+</ol>
+<h2 id="solution">Solution</h2>
+<p>This problem is analogous to a balls in boxes problem. Let there be <span class="math inline">\(3\)</span> boxes (representative of 3 maximum digits) and <span class="math inline">\(n &lt; 10\)</span> balls (each representing a unit of value). For example, the image below displays the arrangement for the number 312 where <span class="math inline">\(n=6\)</span>. <img src="https://imgur.com/ub9yiti.png" /></p><p> If our first box is empty, then we have a two digit number. If our first two boxes are empty, then we have a 1 digit number.</p>
+<p>We may further consider the boxes to be represented by 2 inner walls separating the 3 boxes. We now calculate the number of permutations that these 2 walls and <span class="math inline">\(n\)</span> balls can be in. We have in total <span class="math inline">\(n+2\)</span> objects, which can be arranged in <span class="math inline">\((n+2)!\)</span> ways. However, the <span class="math inline">\(n\)</span> balls and the 2 walls are indistinguishable, so we divide by <span class="math inline">\(n! \cdot 2!\)</span></p>
+<p><span class="math display">\[\therefore \frac{(n+2)!}{n! \cdot 2!} = \frac{(n+1)(n+2)}{2}\]</span></p>
+</div>

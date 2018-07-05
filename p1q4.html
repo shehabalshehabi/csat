@@ -1,0 +1,27 @@
+<div id="header"><a href="http://www.cam.ac.uk/"><img alt="University of Cambridge" src="https://www.cl.cam.ac.uk/images/identifier.gif" /></a></div>
+<div id="dept-title"><a href="https://www.cl.cam.ac.uk">Department of Computer Science and Technology</a></div>
+
+<link rel="stylesheet" type="text/css" href="tempsheet.css" />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<div id="container">
+<h1 id="sample-test-1-question-4">Sample Test 1 Question 4</h1>
+<h3 id="related-topics">Related Topics</h3>
+<ul>
+<li>Summations</li>
+<li>Divisibility</li>
+</ul>
+<h2 id="csat-question">CSAT Question</h2>
+<p>What is the units digit of the number <span class="math inline">\(\sum_{n=1}^{1337}(n!)^4\)</span></p>
+<h2 id="hints">Hints</h2>
+<ol type="1">
+<li>Find <span class="math inline">\(n!\)</span> up to <span class="math inline">\(n=7\)</span>.</li>
+<li>Consider the factors of <span class="math inline">\((n!)^4\)</span> up to <span class="math inline">\(n=7\)</span>. What can you say about numbers for <span class="math inline">\(n \geq 5\)</span></li>
+<li>All numbers with <span class="math inline">\(n \geq 5\)</span> have <span class="math inline">\(10\)</span> as a factor. What about the units digits for <span class="math inline">\(n &lt; 5\)</span>?</li>
+<li>It’s sufficient to take only the units digit when multiplying or raising the number to any power.</li>
+</ol>
+<h2 id="solution">Solution</h2>
+<p>All factorials greater that <span class="math inline">\(5!\)</span> have both the factors <span class="math inline">\(5\)</span> and <span class="math inline">\(2\)</span>. Since <span class="math inline">\(5 \cdot 2=10\)</span>, <span class="math inline">\(10\)</span> is a factor. Hence, the number’s unit digit must be a <span class="math inline">\(0\)</span>. This means that we only need to worry about the numbers corresponding to <span class="math inline">\(n \in \{1,2,3,4\}\)</span>. It’s sufficient to take only the units digit when multiplying or raising to any power.</p>
+<p>We have: - <span class="math inline">\(1^4\rightarrow1\)</span> - <span class="math inline">\((2!)^4=2^4\rightarrow6\)</span> - <span class="math inline">\((3!)^4=6^4\rightarrow6\)</span> - <span class="math inline">\((4!)^4=24^4\rightarrow4^4\rightarrow6\)</span></p>
+<p>The units digit for the sum is therefore <span class="math inline">\(1+6+6+6\rightarrow9\)</span>.</p>
+</div>

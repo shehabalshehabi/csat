@@ -1,0 +1,26 @@
+<div id="header"><a href="http://www.cam.ac.uk/"><img alt="University of Cambridge" src="https://www.cl.cam.ac.uk/images/identifier.gif" /></a></div>
+<div id="dept-title"><a href="https://www.cl.cam.ac.uk">Department of Computer Science and Technology</a></div>
+
+<link rel="stylesheet" type="text/css" href="tempsheet.css" />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<div id="container">
+<h1 id="sample-test-1-question-8">Sample Test 1 Question 8</h1>
+<h3 id="related-topics">Related Topics</h3>
+<ul>
+<li>Combinations</li>
+</ul>
+<h2 id="csat-question">CSAT Question</h2>
+<p>Given a grid of <span class="math inline">\(4\times4\)</span> points, how many triangles with their vertices on the grid can be drawn?</p>
+<h2 id="hints">Hints</h2>
+<ol type="1">
+<li>In how many ways may <span class="math inline">\(3\)</span> points be selected?</li>
+<li>When do <span class="math inline">\(3\)</span> vertices not form a triangle?</li>
+<li>How many combinations of <span class="math inline">\(3\)</span> collinear points are there?</li>
+</ol>
+<h2 id="solution">Solution</h2>
+<p>Triangles are formed by choosing any <span class="math inline">\(3\)</span> points that are not collinear. From a total of <span class="math inline">\(\binom{16}{3}\)</span> possible selected points, we exclude the combinations that form the straight lines shown below:</p>
+<p><embed src="https://i.imgur.com/hMbZ1Vs.png" style="width:550;height:500;"/></p>
+<p><span class="math inline">\(10\)</span> lines pass through <span class="math inline">\(4\)</span> points, and hence, we subtract <span class="math inline">\(10 \cdot \binom{4}{3}\)</span> combinations. The additional <span class="math inline">\(4\)</span> smaller diagonals pass through <span class="math inline">\(3\)</span> points, so we subtract <span class="math inline">\(4 \cdot 1\)</span> combinations. Our answer is therefore:</p>
+<p><span class="math display">\[\binom{16}{3}-10\binom{4}{3}-4 = 516\]</span></p>
+</div>

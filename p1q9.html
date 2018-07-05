@@ -1,0 +1,36 @@
+<div id="header"><a href="http://www.cam.ac.uk/"><img alt="University of Cambridge" src="https://www.cl.cam.ac.uk/images/identifier.gif" /></a></div>
+<div id="dept-title"><a href="https://www.cl.cam.ac.uk">Department of Computer Science and Technology</a></div>
+
+<link rel="stylesheet" type="text/css" href="tempsheet.css" />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<div id="container">
+<h1 id="sample-test-1-question-9">Sample Test 1 Question 9</h1>
+<h3 id="related-topics">Related Topics</h3>
+<ul>
+<li>Probability</li>
+<li>Permutations</li>
+<li>Summations</li>
+</ul>
+<h2 id="warmup-questions">Warmup Questions</h2>
+<ol type="1">
+<li><p>Four random cards are selected from a <a href="https://en.wikipedia.org/wiki/Standard_52-card_deck">pack of 52</a>. What is the probability that the cards read out <span class="math inline">\(\text{1 3 3 7}\)</span> in that order?</p></li>
+<li><p>Three cards are selected, with replacement. What is the probability that at least one of them is of type heart?</p></li>
+<li><p>A coin is flipped 3 times, displaying either heads (<span class="math inline">\(H\)</span>) or tails (<span class="math inline">\(T\)</span>). What is the probability that you do not get <span class="math inline">\(\text{H H H}\)</span>?</p></li>
+</ol>
+<h2 id="csat-question">CSAT Question</h2>
+<p>Player <span class="math inline">\(A\)</span> rolls one die. Player <span class="math inline">\(B\)</span> rolls two dice. If <span class="math inline">\(A\)</span> rolls a number greater or equal to the largest number rolled by <span class="math inline">\(B\)</span>, then <span class="math inline">\(A\)</span> wins, otherwise <span class="math inline">\(B\)</span> wins. What is the probability that B wins?</p>
+<h2 id="hints">Hints</h2>
+<ol type="1">
+<li><p>Let <span class="math inline">\(a\)</span> represent the number rolled by <span class="math inline">\(A\)</span>. Can you represent the probability that <span class="math inline">\(B\)</span> wins in terms of this <span class="math inline">\(a\)</span>?</p></li>
+<li><p><span class="math inline">\(A\)</span> wins if both of <span class="math inline">\(B\)</span>’s dice roll smaller than <span class="math inline">\(a\)</span>.</p></li>
+<li><p>Consider the scenario from the previous hint. What is the probability that <span class="math inline">\(B\)</span> does not win for a given <span class="math inline">\(a\)</span>?</p></li>
+<li><p>How may we map the expression from the previous hint to some arbitrary <span class="math inline">\(a\)</span>?</p></li>
+</ol>
+<h2 id="solution">Solution</h2>
+<p>Let <span class="math inline">\(a \in \{1,2,3,4,5,6\}\)</span> represent the number rolled by <span class="math inline">\(A\)</span>.</p>
+<p>We wish to calculate the probability the <span class="math inline">\(B\)</span> wins i.e. at least one of <span class="math inline">\(B\)</span>’s dice rolls higher than <span class="math inline">\(a\)</span>. This would be <span class="math inline">\(1\)</span> minus the probability that both of <span class="math inline">\(B\)</span>’s dice are smaller than or equal to <span class="math inline">\(A\)</span>’s.</p>
+<p>For a given <span class="math inline">\(a\)</span>, there exist <span class="math inline">\(a\)</span> numbers smaller or equal to <span class="math inline">\(a\)</span> that may be rolled. Therefore, the probability of <span class="math inline">\(B\)</span> winning is given by <span class="math inline">\(1-(\frac{a}{6})^2\)</span>.</p>
+<p>Now, we are required to consider all possible values of <span class="math inline">\(a\)</span>. The probability of any value of <span class="math inline">\(a \in \{1,2,3,4,5,6\}\)</span> being rolled is <span class="math inline">\(\frac{1}{6}\)</span>. So: <span class="math display">\[\sum_{a=1}^{6} \frac{1}{6}(1-(\frac{a}{6})^2) = \frac{125}{216}\]</span></p>
+<p>See properties of summations <a href="http://math2.uncc.edu/~sjbirdso/calc%20II-sum09/handouts/properties%20of%20sums.pdf">here</a> to aid in evaluating the sum.</p>
+</div>

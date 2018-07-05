@@ -1,0 +1,42 @@
+<div id="header"><a href="http://www.cam.ac.uk/"><img alt="University of Cambridge" src="https://www.cl.cam.ac.uk/images/identifier.gif" /></a></div>
+<div id="dept-title"><a href="https://www.cl.cam.ac.uk">Department of Computer Science and Technology</a></div>
+
+<link rel="stylesheet" type="text/css" href="tempsheet.css" />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<div id="container">
+<h1 id="sample-test-1-question-18">Sample Test 1 Question 18</h1>
+<h3 id="related-topics">Related Topics</h3>
+<ul>
+<li>Geometry</li>
+<li>Trigonometry</li>
+<li>Spherical Geometry</li>
+</ul>
+<h2 id="warmup-questions">Warmup Questions</h2>
+<ol type="1">
+<li><p>Imagine a vertical pole on the equator. At midday, the sun is directly over the pole so that it does not cast shadow. If the length of the shadow at 1:00pm is 50cm, how tall is the pole? (You may assume that the Earth is perfectly spherical and the sun moves directly above the eqautor and a day is excactly 24 hours long.)</p></li>
+<li><p>What is the radius of the line of intersection of two hollow spheres of radius 1 centred 1.5 units apart.</p></li>
+</ol>
+<h2 id="csat-question">CSAT Question</h2>
+<p>You travel on Earth’s surface south <span class="math inline">\(n\)</span> miles, then east <span class="math inline">\(n\)</span> miles, then north <span class="math inline">\(n\)</span> miles and find yourself back where you started, without visiting any point <strong>more than twice</strong>. What is the closest you could have been to the south pole when you started? Assume Earth is a sphere with radius <span class="math inline">\(R &gt; n\)</span>.</p>
+<h2 id="hints">Hints</h2>
+<ol type="1">
+<li>Read the question carefully. In what ways is it possible to return to the starting point ignoring the more than twice requirement.</li>
+<li>Consider longitude and latitude</li>
+<li>How does each stage of the path you must take affect longitude and latitude?</li>
+<li>How many times may you go around the world at the same latitude without visiting a point more than twice?</li>
+<li>Here is the optimal solution if you are allowed to visit any point at most twice. What is the distance of the starting point to the south pole? </li>
+<img src="https://i.imgur.com/yMfTR49.png" alt="Diagram" />
+</ol>
+<h2 id="solution">Solution</h2>
+<p>Here is the optimal solution if you are allowed to visit any point at most twice:</p>
+<figure>
+<img src="https://i.imgur.com/yMfTR49.png" alt="Diagram" />
+</figure>
+<p>You go down <span class="math inline">\(n\)</span> miles towards the South Pole, then you take a round trip of <span class="math inline">\(n\)</span> miles laterally until you get back to where you were, then you travel up <span class="math inline">\(n\)</span> miles towards the North Pole.</p>
+<p><span class="math display">\[
+Rsin(\theta)= r, 2{\pi}r = n \\
+D = n + R\theta \\
+D = n + R    sin^{-1}(\frac{n}{2{\pi}R})
+\]</span> <img src="https://i.imgur.com/XqaUO2b.png"/></p>
+</div>

@@ -1,0 +1,36 @@
+<div id="header"><a href="http://www.cam.ac.uk/"><img alt="University of Cambridge" src="https://www.cl.cam.ac.uk/images/identifier.gif" /></a></div>
+<div id="dept-title"><a href="https://www.cl.cam.ac.uk">Department of Computer Science and Technology</a></div>
+
+<link rel="stylesheet" type="text/css" href="tempsheet.css" />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<div id="container">
+<h1 id="sample-test-1-question-10">Sample Test 1 Question 10</h1>
+<h3 id="related-topics">Related Topics</h3>
+<ul>
+<li>Geometry of a circle</li>
+<li>Geometry of a line</li>
+<li>Tangent line</li>
+<li>Trigonometry of right triangles</li>
+</ul>
+<h2 id="warmup-questions">Warmup Questions</h2>
+<ol type="1">
+<li>What is the slope of the tangent to the curve <span class="math inline">\(y = 2x^2+3x-2\)</span> at <span class="math inline">\(x=4\)</span>?</li>
+<li>You are given <span class="math inline">\(3\)</span> lines: <span class="math inline">\(y=2x\)</span>, <span class="math inline">\(y=2x-2\)</span>, <span class="math inline">\(y=-\frac{1}{2}x+3\)</span>. For each pair of lines, state whether they are parallel or perpendicular.</li>
+<li>Find the value of <span class="math inline">\(a\)</span> such that the line <span class="math inline">\(y_1=3x+a\)</span> is tangent to the curve <span class="math inline">\(y_2=2x^2+3x+1\)</span></li>
+</ol>
+<h2 id="csat-question">CSAT Question</h2>
+<p>A circle of radius <span class="math inline">\(r\)</span> is tangent at two points on the parabola <span class="math inline">\(y=x^2\)</span> such that the angle between the two radii at the tangent points is <span class="math inline">\(2\theta\)</span>, where <span class="math inline">\(0&lt;2\theta&lt;\pi\)</span>. Find <span class="math inline">\(r\)</span> as a function of <span class="math inline">\(\theta\)</span>.</p>
+<h2 id="hints">Hints</h2>
+<ol type="1">
+<li>Let <span class="math inline">\(P\)</span> be one of the points where the parabola and the circle touch. What is an angle between the radius of the circle and tangent to the parabola at point <span class="math inline">\(P\)</span>?</li>
+<li>Let <span class="math inline">\((x,x^2)\)</span> be coordinates of <span class="math inline">\(P\)</span>. What is a slope of the tangent line to the parabola at the point <span class="math inline">\(P\)</span>?</li>
+<li>What is the slope of the normal to the parabola at the point <span class="math inline">\(P\)</span>?</li>
+<li>Notice that the radius of the circle lies on the line normal to the parabola at the point <span class="math inline">\(P\)</span>. Also, notice that this line intersects y-axis at an angle <span class="math inline">\(\theta\)</span>. Again, what is a slope of normal to the parabola at point <span class="math inline">\(P\)</span>?</li>
+<li>You can find the slope of the tangent using derivatives and the slope of the normal by considering the right-angled triangle with sides of length <span class="math inline">\(r\)</span>,<span class="math inline">\(x\)</span> and <span class="math inline">\(rcos(\theta)\)</span>. What identity holds for slopes of perpendicular lines and how would you use it to solve this problem?</li>
+</ol>
+<h2 id="solution">Solution</h2>
+<p><img src="https://i.imgur.com/fDgMV9h.png" style="height: 500"/></p>
+<p>Let <span class="math inline">\(O\)</span> be the centre of the circle and <span class="math inline">\(P\)</span> be one of the points where the circle is tangent to the parabola. The main idea in this solution is to investigate the slopes of the line tangent to the parabola at the point <span class="math inline">\(P\)</span> as well as normal to it. Let these be <span class="math inline">\(l\)</span> and <span class="math inline">\(n\)</span>, respectively. Before we move forward, we denote the coordinates of the point <span class="math inline">\(P\)</span> by <span class="math inline">\((x,x^2)\)</span> (remember that we have parabola <span class="math inline">\(y=x^2\)</span>). Now, we find the slopes: * To find the slope of the line tangent to the parabola at the point <span class="math inline">\(P\)</span>, we may use the fact that derivative of <span class="math inline">\(x^2\)</span> is <span class="math inline">\(2x\)</span> and hence conclude that slope of the line <span class="math inline">\(l\)</span> is <span class="math inline">\(2x\)</span>. * First we notice that since the circle is tangent to the parabola at point <span class="math inline">\(P\)</span> it is also tangent to line <span class="math inline">\(l\)</span> at the same point. Hence, the radius of the circle is perpendicular to line <span class="math inline">\(l\)</span> and lies on the line <span class="math inline">\(n\)</span>. * To find the slope of the line normal to the parabola (and line <span class="math inline">\(l\)</span> as well) at the point <span class="math inline">\(P\)</span>, we denote by <span class="math inline">\(Q\)</span> point on y-axis such that line <span class="math inline">\(PQ\)</span> is parallel to the x-axis. Now we need to investigate triangle <span class="math inline">\(OPQ\)</span>. Its hypotenuse has length <span class="math inline">\(r\)</span> and its opposite side is <span class="math inline">\(x\)</span>. Since one of its angles is <span class="math inline">\(\theta\)</span> we conclude that the adjacent side is <span class="math inline">\(rcos(\theta)\)</span>. Now by definition of slope of line <span class="math inline">\(n\)</span>, we find it to be <span class="math inline">\(-\frac{x}{rcos(\theta)}\)</span>.</p>
+<p>The only thing that is left is to notice that if two lines are perpendicular, then the product of their slopes is <span class="math inline">\(-1\)</span>. Hence, <span class="math display">\[ \frac{-rcos(\theta)}{x} \cdot 2x = -1 \implies r = \frac{1}{2cos(\theta)}\]</span></p>
+</div>

@@ -1,0 +1,23 @@
+<div id="header"><a href="http://www.cam.ac.uk/"><img alt="University of Cambridge" src="https://www.cl.cam.ac.uk/images/identifier.gif" /></a></div>
+<div id="dept-title"><a href="https://www.cl.cam.ac.uk">Department of Computer Science and Technology</a></div>
+
+<link rel="stylesheet" type="text/css" href="tempsheet.css" />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<div id="container">
+<h1 id="sample-test-1-question-5">Sample Test 1 Question 5</h1>
+<h3 id="related-topics">Related Topics</h3>
+<ul>
+<li>No tags.</li>
+</ul>
+<h2 id="csat-question">CSAT Question</h2>
+<p>Using only the functions <span class="math inline">\(\max\)</span> and <span class="math inline">\(\min\)</span> and arithmetic operations (no <span class="math inline">\(\text{if}\)</span> clauses), express the amount of possible overlap between two intervals <span class="math inline">\([a_1,a_2]\)</span> and <span class="math inline">\([b_1,b_2]\)</span>, where <span class="math inline">\(a_1,a_2,b_1,b_2\)</span> are arbitrary real numbers with <span class="math inline">\(a_1&lt;a_2\)</span> and <span class="math inline">\(b_1&lt;b_2\)</span>.</p>
+<h2 id="hints">Hints</h2>
+<ol type="1">
+<li>What is the interval of intersection of <span class="math inline">\([a_1,a_2]\)</span> and <span class="math inline">\([b_1,b_2]\)</span>?</li>
+<li>Think about intervals on the real number line. Can you sketch <span class="math inline">\([a_1,a_2]\)</span> and <span class="math inline">\([b_1,b_2]\)</span>?</li>
+<li>Can you express the smallest value in this intersection as a function of <span class="math inline">\(a_1\)</span> and <span class="math inline">\(b_1\)</span>? What about the largest value?</li>
+</ol>
+<h2 id="solution">Solution</h2>
+<p>The following picture shows an example configuration of <span class="math inline">\([a_1,a_2]\)</span> (blue), <span class="math inline">\([b_1,b_2]\)</span>(green) and their intersection(red). </p><img src="https://i.imgur.com/1xztGXc.png" style="height:150" /><p> For now assume that intervals intersect. We can notice that the smallest value in this intersection is always <span class="math inline">\(max(a_1, b_1)\)</span>, and the largest value in this intersection is <span class="math inline">\(min(a_2,b_2)\)</span>. Hence, the amount of overlap of these intervals can be expressed as <span class="math inline">\(min(a_2,b_2)-max(a_1, b_1)\)</span>. Intervals intersect only if this value is positive, hence the final formula is <span class="math inline">\(max(0,min(a_2,b_2)-max(a_1, b_1)).\)</span></p>
+</div>

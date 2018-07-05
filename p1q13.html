@@ -1,0 +1,38 @@
+<div id="header"><a href="http://www.cam.ac.uk/"><img alt="University of Cambridge" src="https://www.cl.cam.ac.uk/images/identifier.gif" /></a></div>
+<div id="dept-title"><a href="https://www.cl.cam.ac.uk">Department of Computer Science and Technology</a></div>
+
+<link rel="stylesheet" type="text/css" href="tempsheet.css" />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<div id="container">
+
+<h1 id="sample-test-1-question-13">Sample Test 1 Question 13</h1>
+<h3 id="related-topics">Related Topics</h3>
+<ul>
+<li>Combinations</li>
+<li>Permutations</li>
+</ul>
+<h2 id="warmup-questions">Warmup Questions</h2>
+<ol type="1">
+<li><p>Solve <span class="math inline">\(\binom{n+2}{n}=0\)</span>, for some integer <span class="math inline">\(n\)</span>. Explain why negative solutions have no real meaning.</p></li>
+<li><p>What is the probability that a randomly selected <span class="math inline">\(2\)</span> digit number has the number <span class="math inline">\(2\)</span> in it?</p></li>
+<li><p>In a gymnastics competition, <span class="math inline">\(10\)</span> people compete. The first, second and third gymnasts each receive gold, silver and bronze medals, respectively. How many combinations of gymnasts attaining medals are there?</p></li>
+<li><p>How many binary numbers of length 8 that contains 3 <span class="math inline">\(1\)</span>s?</p></li>
+</ol>
+<h2 id="csat-question">CSAT Question</h2>
+<p>On a grid of <span class="math inline">\(m\times n\)</span> squares, how many ways exist to get from the top-left corner to the bottom-right corner if you can only move right or down on an edge?</p>
+<h2 id="hints">Hints</h2>
+<ol type="1">
+<li>How many steps in total must be taken?</li>
+<li>From a total of <span class="math inline">\(m+n\)</span> steps, how many are rightward steps and how many are downward steps?</li>
+<li>If we have <span class="math inline">\(m\)</span> rightward steps, how many combinations of them are there?</li>
+<li>For each combination of rightward steps, how many combinations of downward steps are there?</li>
+</ol>
+<h2 id="sol</div></div>ution">Solution</h2>
+<p>Regardless of the path taken, you must travel <span class="math inline">\(m\)</span> steps right and <span class="math inline">\(n\)</span> steps down. Of these consecutive <span class="math inline">\(m+n\)</span> steps, we consider the number of different ways we may choose <span class="math inline">\(m\)</span> to be rightward steps. This is <span class="math inline">\(\binom{m+n}{m}\)</span>. For each of these combinations, the remaining <span class="math inline">\(n\)</span> steps down are uniquely determined i.e. there is only 1 combination since <span class="math inline">\(\binom{m+n-m}{n} = \binom{n}{n} = 1\)</span>, so <span class="math inline">\(\binom{m+n}{m}\)</span> is our final answer.</p>
+<p>Similarly, we may first find the combinations of <span class="math inline">\(n\)</span> downward steps and fix rightward steps to obtain <span class="math inline">\(\binom{m+n}{n}\)</span> as our answer.</p>
+<p>Another way to look at this is to consider the permutations of <span class="math inline">\(m+n\)</span> steps, where <span class="math inline">\(m\)</span> rightward steps and <span class="math inline">\(n\)</span> downward steps are both indistinguishable types of steps. We find the number of permutations for <span class="math inline">\(m+n\)</span> things, and remove (by dividing by) the number of permutations specifically for just the rightwards and downward steps. This gives us the answer <span class="math inline">\(\frac{(m+n)!}{m! \cdot n!}\)</span>.</p>
+<p>Thus, any of the following expressions are equivalent and correct:</p>
+<p><span class="math display">\[\binom{m+n}{m} \equiv \binom{m+n}{n} \equiv \frac{(m+n)!}{m! \cdot n!}\]</span></p>
+
+</div>
